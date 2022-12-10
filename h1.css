@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Gilroy";
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(24, 23, 23);
+}
+
+#left{
+    height: 7%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    padding-right: 35px;
+    overflow: hidden;
+    position: absolute;
+    left: 3%;
+    top: 93%;
+    transform-origin: 0% 100%;
+    transform: rotate(-90deg);
+    padding-left: 35px;
+    border-bottom: 1px solid #8d8585;
+    background-color: rgb(32, 31, 31);
+    animation: moveright 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveright{
+    0%{
+        transform: translateX(-100px) rotate(-90deg);
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(0) rotate(-90deg);
+        visibility: visible;
+    }
+}
+
+
+i{
+    margin-left: 30px;
+    transform: rotate(90deg);
+    animation: moveup 1s linear 1;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveup{
+    0%{
+        transform: translateX(-100px) rotate(90deg);
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(0) rotate(90deg);
+        visibility: visible;
+    }
+}
+
+
+#p{
+    font-size: 20px;
+    color: rgb(194, 36, 62);
+}
+
+#b{
+    font-size: 20px;
+    color: rgb(28, 103, 173);
+}
+
+#g{
+    font-size: 20px;
+    color: rgb(55, 204, 92);
+}
+
+#right{
+    width: 97%;
+    height: 100%;
+    position: absolute;
+    left: 3%;
+    overflow: hidden;
+    background-image: linear-gradient(to left, rgb(70, 66, 66), rgb(63, 59, 59), rgb(56, 53, 53), rgb(49, 46, 46), rgb(37, 34, 34),rgb(29, 28, 28),rgb(22, 21, 21),rgb(17, 16, 16),rgb(14, 13, 13));
+}
+
+#nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+#nav #content{
+    width: 600px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
+    /* background-color: yellow; */
+    animation: navleft 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes navleft{
+    0%{
+        transform: translateX(400px);
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+
+#active{
+    border-bottom: 2px solid red;
+    padding: 5px;
+}
+
+#logo{
+    height: 50px;
+    animation: logodown 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logodown{
+    0%{
+        transform: translateY(-100px);
+        visibility: visible;
+    }
+    100%{
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+#moon{
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    /* background-color: red; */
+    position: absolute;
+    right: 13%;
+    top: 15%;
+    background-image: url(./dennys-hess-Gt_4iMB7hY0-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#bgc{
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background-color: rgba(61, 57, 57, 0.219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#watch{
+    height: 505px;
+    z-index: 9999;
+    animation: zoomin 1s linear 1;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoomin{
+    0%{
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    100%{
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+#bg{
+    text-align: center;
+    font-size: 260px;
+    font-weight: 600;
+    color: rgba(22, 21, 21, 0.76);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: dark 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dark{
+    0%{
+        transform: translateX(-200px) translate(-50%,-50%);
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(0) translate(-50%,-50%);
+        visibility: visible;
+    }
+}
+
+#body{
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    z-index: 9999;
+    background-color: transparent;
+    animation: bodyleft 1s linear 1;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bodyleft{
+    0%{
+        transform: translateX(-200px);
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+h4{
+    letter-spacing: 5px;
+    font-family: "Voyage";
+    color: rgb(78, 75, 75);
+}
+
+h1{
+    font-size: 55px;
+    font-weight: 600;
+    color: rgb(187, 182, 182);
+}
+
+p{
+    font-size: 12px;
+    margin-top: 5px;
+    color: rgb(78, 75, 75);
+}
+
+button{
+    height: 35px;
+    width: 150px;
+    padding: 0px 10px;
+    margin-top: 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(241, 37, 37);
+}
+
+#btm1{
+    width: 60px;
+    height: 110px;
+    position: absolute;
+    bottom: 0%;
+    right: 10%;
+    background-color: rgb(241, 37, 37);
+    animation: btmup 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btmup{
+    0%{
+        transform: translateY(100px);
+        visibility: visible;
+    }
+    100%{
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+
+h6{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+
+#btm2{
+    width: 70%;
+    height: 60px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    padding: 0px 70px;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(110, 105, 105, 0.548);
+    animation: btmup 1s linear 1;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+#btm2 h3{
+    color: white;
+    font-family: "Ogg";
+}
+
+#price{
+    width: 65px;
+    height: 40px;
+    position: absolute;
+    right: 10%;
+    bottom: 25%;
+    background-color: transparent;
+    animation: navleft 1s linear 1;
+    animation-delay: 5s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+#price p{
+    font-size: 10px;
+    color: rgb(78, 75, 75);
+
+}
+
+#price span{
+    font-size: 20px;
+    color: rgb(187, 182, 182);
+    font-family: "Ogg";
+}
